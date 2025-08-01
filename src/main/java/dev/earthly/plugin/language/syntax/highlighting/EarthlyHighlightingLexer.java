@@ -14,6 +14,18 @@ import org.jetbrains.plugins.textmate.plist.PlistReader;
 import java.io.InputStream;
 import java.io.BufferedInputStream;
 
+/**
+ * TextMate-based syntax highlighting lexer for Earthly files.
+ * 
+ * NOTE: This implementation uses deprecated TextMate APIs (TextMateSyntaxTable, etc.)
+ * that are scheduled for removal in future IntelliJ releases. These APIs still work
+ * correctly in IntelliJ 2025.1.x but will need to be migrated when:
+ * 1. The new TextMate API is properly documented
+ * 2. The deprecated APIs are actually removed
+ * 
+ * The warnings about these deprecated APIs are expected and don't affect functionality.
+ * See EarthlyHighlightingLexerV2 for a placeholder for the future migration.
+ */
 public class EarthlyHighlightingLexer extends TextMateHighlightingLexer {
 
   private final static String EARTHFILE_DESC = "earthfile.tmLanguage.json";

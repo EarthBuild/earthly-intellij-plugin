@@ -7,7 +7,7 @@ import com.intellij.patterns.PlatformPatterns;
 import com.intellij.psi.PsiElement;
 import com.intellij.util.ProcessingContext;
 import dev.earthly.plugin.language.syntax.psi.EarthlyPsiElement;
-import org.apache.commons.lang.StringUtils;
+import com.intellij.openapi.util.text.StringUtil;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class EarthlyCompletionContributor extends CompletionContributor {
                         final Project project = element.getProject();
 
                         String key = element.getText().replace(CompletionUtilCore.DUMMY_IDENTIFIER_TRIMMED, "");
-                        if (StringUtils.isEmpty(key))
+                        if (StringUtil.isEmpty(key))
                             return;
                         List<PsiElement> matched = EarthlyUtil.findAllFunctions(project, (EarthlyPsiElement) element);
                         for (PsiElement potential : matched) {
