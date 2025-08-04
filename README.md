@@ -15,6 +15,10 @@ Check the currently released versions [on the JetBrains Marketplace](https://plu
 
 ## Known Issues
 
+### Uninstall Earthly plugin first!
+
+Please uninstall the now unsupported Earthly plugin first before installing the EarthBuild plugin.
+
 ### TextMate API Warnings
 The plugin uses TextMate APIs that are marked as deprecated in IntelliJ 2025.1.x. These warnings are expected and don't affect functionality. The APIs will be migrated when:
 - The new TextMate API is properly documented
