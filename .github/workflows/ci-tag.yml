@@ -18,4 +18,9 @@ jobs:
       - name: Extract version from tag
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
       - name: Release
-        run: earthly --push +publish --version=$RELEASE_VERSION
+        env:
+          CERTIFICATE_CHAIN: ${{ secrets.CERTIFICATE_CHAIN }}
+          PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PRIVATE_KEY_PASSWORD: ${{ secrets.PRIVATE_KEY_PASSWORD }}
+          PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        run: earthly --push --secret CERTIFICATE_CHAIN --secret PRIVATE_KEY --secret PRIVATE_KEY_PASSWORD --secret PUBLISH_TOKEN +publish --version=$RELEASE_VERSION
