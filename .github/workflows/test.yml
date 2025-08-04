@@ -1,6 +1,7 @@
+name: Test
+
 on:
   pull_request:
-  push:
 
 jobs:
   test:
@@ -9,7 +10,9 @@ jobs:
       FORCE_COLOR: 1
       EARTHLY_CONVERSION_PARALLELISM: "5"
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: earthly/actions/setup-earthly@v1
-      - name: test
+        with:
+          version: latest
+      - name: Run Earthly tests
         run: earthly +test

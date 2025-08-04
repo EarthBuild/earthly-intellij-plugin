@@ -13,6 +13,16 @@ Check the currently released versions [on the JetBrains Marketplace](https://plu
 - [ ] Formatter
 - [ ] ... Let us know!
 
+## Known Issues
+
+### TextMate API Warnings
+The plugin uses TextMate APIs that are marked as deprecated in IntelliJ 2025.1.x. These warnings are expected and don't affect functionality. The APIs will be migrated when:
+- The new TextMate API is properly documented
+- The deprecated APIs are actually removed from the platform
+
+### Optional Module Warnings
+When running plugin verification, you may see warnings about unresolved optional modules (Python, Ruby, etc.). These are expected for optional dependencies and don't affect the plugin's core functionality.
+
 
 ![Darcula theme](documentation/darcula.png)
 ![Light theme](documentation/light.png)
@@ -28,19 +38,19 @@ For local development, this will generate a gradle wrapper (`gradle/`) correspon
 earthly +generate-gradle-wrapper
 ```
 
-## Signing (requires `earthly-technologies` org membership)
-The following command generates a `earthly-intellij-plugin-signed-<version>.zip` package in the current directory:
+## Signing
+The following command generates a signed plugin package:
 ```
 earthly +sign [--version=<version>]
 ```
 
-## Publishing (requires `earthly-technologies` org membership)
+## Publishing
 The following command builds, signs and publishes the plugin to the [IntelliJ Marketplace](https://plugins.jetbrains.com/plugin/20392-earthly):
 ```
 earthly --push +publish --version=<version>
 ```
 
-This target is automatically triggered when a new git tag is pushed in the form of `vX.Y.Z`.
+Publishing is automatically triggered when a new git tag is pushed in the form of `vX.Y.Z`.
 
 ## Testing
 ```
