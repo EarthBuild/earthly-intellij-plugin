@@ -2,7 +2,7 @@
 
 IntelliJ plugin for Earthly language support. 
 
-Check the currently released versions [on the JetBrains Marketplace](https://plugins.jetbrains.com/plugin/20392-earthly/versions).
+Check the currently released versions [on the JetBrains Marketplace](https://plugins.jetbrains.com/plugin/28062-earthbuild/versions).
 
 ## Features
 - [x] Syntax highlighting for Earthfiles
