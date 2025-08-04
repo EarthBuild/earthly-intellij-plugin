@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "dev.earthly"
-version = "1.0.2"
+version = "0.0.0"
 
 repositories {
     mavenCentral()

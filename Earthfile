@@ -1,5 +1,6 @@
 VERSION --pass-args --global-cache --use-function-keyword 0.7
 ARG --global gradle_version=8.5
+ARG --global version=0.0.0
 FROM gradle:${gradle_version}-jdk17
 
 install:
@@ -11,20 +12,17 @@ install:
   ENV GRADLE_USER_HOME=/root/.gradle
 
 src:
-  ARG version="0.0.0"
   FROM +install
   COPY src src
   ARG --required version
   RUN sed -i 's^0.0.0^'"$version"'^g' ./build.gradle.kts
 
 test:
-  ARG version="0.0.0"
   FROM +src --version=$version
   RUN --mount=type=cache,target=/root/.gradle gradle --no-daemon test
 
 # dist builds the plugin and saves the artifact locally
 dist:
-  ARG version="0.0.0"
   FROM +src --version=$version
   RUN --mount=type=cache,target=/root/.gradle gradle --no-daemon buildPlugin
   SAVE ARTIFACT build/distributions/earthly-intellij-plugin-$version.zip AS LOCAL earthly-intellij-plugin-$version.zip

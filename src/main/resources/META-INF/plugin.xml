@@ -8,12 +8,12 @@
   <name>EarthBuild</name>
 
   <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-  <vendor email="support@earthbuild.dev" url="https://earthbuilt.dev">earthly.dev</vendor>
+  <vendor email="support@earthbuild.dev" url="https://earthbuild.dev">earthbuild.dev</vendor>
   <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
        Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
        Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
   <description><![CDATA[
-    <p>Adds comprehensive <a href="https://earthly.dev">Earthly</a> language support to IntelliJ IDEA and other JetBrains IDEs.</p>
+    <p>Adds comprehensive <a href="https://earthbuild.dev">Earthly</a> language support to IntelliJ IDEA and other JetBrains IDEs.</p>
     
     <h3>What is Earthly?</h3>
     <p>Earthly is a build automation tool that combines the best of Makefiles and Dockerfiles. It provides reproducible builds that run anywhere - on your laptop, in CI/CD, or in production.</p>
@@ -42,7 +42,6 @@
       <li><a href="https://docs.earthly.dev">Earthly Documentation</a></li>
       <li><a href="https://github.com/EarthBuild/earthly-intellij-plugin/issues">Report Issues</a></li>
       <li><a href="https://github.com/EarthBuild/earthly-intellij-plugin">Source Code</a></li>
-      <li><a href="https://earthly.dev/slack">Earthly Community</a></li>
     </ul>
 
     <br>

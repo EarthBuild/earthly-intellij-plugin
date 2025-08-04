@@ -66,8 +66,8 @@ openssl verify -CAfile chain.crt certificate.crt
 # Add to your shell profile (.bashrc, .zshrc, etc.)
 export CERTIFICATE_CHAIN=$(cat chain.crt | base64 -w 0)
 export PRIVATE_KEY=$(cat private-nopass.pem | base64 -w 0)
-export PRIVATE_KEY_PASSWORD="tdZMtJqQaD4wsu6yoBtA"
-export PUBLISH_TOKEN="perm-amJhbGR3aW5yb2JlcnRz.OTItMTMwMTA=.SYycYbScOG7cCOI5rt3MG17P0986cn"
+export PRIVATE_KEY_PASSWORD="<YOUR_PRIVATE_KEY_PASSWORD>"
+export PUBLISH_TOKEN="<YOUR_JETBRAINS_MARKETPLACE_TOKEN>"
 ```
 
 ## Step 5: Set Up GitHub Actions Secrets
