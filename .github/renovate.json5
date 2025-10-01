@@ -6,42 +6,17 @@
     'security:openssf-scorecard',
     ':semanticCommits'
   ],
-  ],
-  baseBranchPatterns: [
-    'main',
-  ],
   configMigration: true,
-  prHourlyLimit: 1,
-  prConcurrentLimit: 3,
   schedule: [ // utc timezone
-    'after 4pm on monday',
-  ],
-  enabledManagers: [
-    'custom.regex',
-    'github-actions',
-    'dockerfile',
-    'gomod',
+    '* 0-3 * * *',
   ],
   dockerfile: {
     managerFilePatterns: [
-      '/Earthfile/',
+      '/^Earthfile$/',
       '/.*\\.earth$/',
     ],
   },
-  customManagers: [
-    {
-      customType: 'regex',
-      managerFilePatterns: [
-        '/^Earthfile$/',
-      ],
-      matchStrings: [
-        '\\s*#\\s*renovate:\\s*datasource=(?<datasource>.*?)\\s+depName=(?<depName>.*?)[\\s\\n]+(versioning=(?<versioning>.*?)\\s+)?ARG\\s+.*?(_VERSION|_VER|version)=(?<currentValue>.*?)($|\\s|\\n)',
-      ],
-    },
-  ],
   labels: [
     'renovate',
-  ],
-  packageRules: [
   ],
 }
