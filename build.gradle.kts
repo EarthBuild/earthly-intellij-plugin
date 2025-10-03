@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.apache.commons:commons-collections4:4.4")
+    implementation("org.apache.commons:commons-collections4:4.5.0")
     testImplementation("junit:junit:4.13.2")
     
     intellijPlatform {
