@@ -1,5 +1,5 @@
 VERSION --pass-args --global-cache --use-function-keyword 0.7
-ARG --global gradle_version=8.5
+ARG --global gradle_version=8.7
 ARG --global version=0.0.0
 FROM gradle:${gradle_version}-jdk17
 
