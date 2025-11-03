@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("org.jetbrains.intellij.platform") version "2.10.3"
+    id("org.jetbrains.intellij.platform") version "2.10.4"
 }
 
 group = "dev.earthly"
