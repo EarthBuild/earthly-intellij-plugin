@@ -12,7 +12,7 @@ jobs:
       EARTHLY_CONVERSION_PARALLELISM: "5"
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
-      - uses: earthly/actions/setup-earthly@v1
+      - uses: earthly/actions/setup-earthly@fb998b3dbcf877575a8f9c1897dd64efb9564176  # v1
         with:
           version: latest
       - name: Extract version from tag
