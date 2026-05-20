@@ -140,11 +140,11 @@ Each IDE feature is implemented through specific extension points:
 
 ### Platform Compatibility
 - IntelliJ Platform version: 2025.1.3
-- Supported build range: 232 to 251.*
+- Supported build range: 232 and newer
 - JDK version: 17 (required for building)
-- Gradle version: 8.5
+- Gradle version: 8.13
 - Kotlin version: 2.0.0 (required for IntelliJ 2025.1+)
-- IntelliJ Platform Gradle Plugin: 2.6.0
+- IntelliJ Platform Gradle Plugin: 2.10.5
 
 ### Dependencies
 - **Required**: TextMate bundles plugin (`org.jetbrains.plugins.textmate`)

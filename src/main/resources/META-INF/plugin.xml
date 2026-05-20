@@ -50,6 +50,12 @@
 
 
   <change-notes><![CDATA[
+    <h3>Version 1.0.3 (2026-05-20)</h3>
+    <h4>Changed</h4>
+    <ul>
+      <li>Removed the upper JetBrains IDE build cap so future platform builds remain eligible.</li>
+    </ul>
+
     <h3>Version 1.0.2 (2025-08-01)</h3>
     <h4>Added</h4>
     <ul>

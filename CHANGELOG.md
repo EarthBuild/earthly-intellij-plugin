@@ -5,6 +5,14 @@ All notable changes to the EarthBuild IntelliJ Plugin will be documented in this
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3] - 2026-05-20
+
+### Changed
+
+- Removed the `untilBuild` cap so the plugin remains available for future
+  JetBrains IDE builds without requiring a compatibility-only release for each
+  platform branch.
+
 ## [1.0.2] - 2026-04-22
 
 ### Changed
