@@ -14,12 +14,10 @@ repositories {
 }
 
 dependencies {
-    implementation("org.apache.commons:commons-collections4:4.5.0")
     testImplementation("junit:junit:4.13.2")
 
     intellijPlatform {
         intellijIdeaUltimate("2025.1.3")
-        bundledPlugin("org.jetbrains.plugins.textmate")
 
         pluginVerifier()
         zipSigner()
@@ -32,7 +30,7 @@ intellijPlatform {
 
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "232"
+            sinceBuild = "243"
         }
     }
 

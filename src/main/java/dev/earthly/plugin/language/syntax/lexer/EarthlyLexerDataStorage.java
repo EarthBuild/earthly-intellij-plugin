@@ -9,7 +9,6 @@ import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import java.util.ArrayList;
 import java.util.List;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.plugins.textmate.language.syntax.lexer.TextMateScope;
 
 public class EarthlyLexerDataStorage extends ShortBasedStorage {
 
@@ -66,4 +65,3 @@ public class EarthlyLexerDataStorage extends ShortBasedStorage {
     return new EarthlyLexerDataStorage(tokenTypeMap, tokenTypes);
   }
 }
-

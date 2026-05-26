@@ -59,9 +59,9 @@ public class EarthlyHighlighter extends SyntaxHighlighterBase {
     COLOR_MAP.put("variable.other.earthfile", VARIABLE);
   }
 
-  private final EarthlyHighlightingLexer myLexer;
+  private final Lexer myLexer;
 
-  public EarthlyHighlighter(EarthlyHighlightingLexer lexer) {
+  public EarthlyHighlighter(Lexer lexer) {
     myLexer = lexer;
   }
 
@@ -73,9 +73,8 @@ public class EarthlyHighlighter extends SyntaxHighlighterBase {
 
   @Override
   public TextAttributesKey @NotNull [] getTokenHighlights(IElementType tokenType) {
-    if (tokenType instanceof EarthlyElementType) {
-      EarthlyElementType type = (EarthlyElementType) tokenType;
-      TextAttributesKey[] ret = COLOR_MAP.get(type.getScope().getScopeName());
+    if (tokenType instanceof EarthlyElementType type) {
+      TextAttributesKey[] ret = COLOR_MAP.get(type.getScopeName());
       if (ret != null) {
         return ret;
       }
