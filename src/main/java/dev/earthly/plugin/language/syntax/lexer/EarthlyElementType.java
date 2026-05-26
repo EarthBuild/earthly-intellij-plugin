@@ -3,35 +3,34 @@ package dev.earthly.plugin.language.syntax.lexer;
 import com.intellij.psi.tree.IElementType;
 import dev.earthly.plugin.metadata.EarthlyLanguage;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.plugins.textmate.language.syntax.lexer.TextMateScope;
 
 public class EarthlyElementType extends IElementType {
-  private final TextMateScope myScope;
+  private final String myScopeName;
 
-  public EarthlyElementType(@NotNull TextMateScope scope) {
-    super(scope.toString(), EarthlyLanguage.INSTANCE);
-    myScope = scope;
+  public EarthlyElementType(@NotNull String scopeName) {
+    super(scopeName, EarthlyLanguage.INSTANCE);
+    myScopeName = scopeName;
   }
 
   @NotNull
-  public TextMateScope getScope() {
-    return myScope;
+  public String getScopeName() {
+    return myScopeName;
   }
 
   @Override
   public int hashCode() {
-    return getScope().hashCode();
+    return myScopeName.hashCode();
   }
 
   @Override
   public String toString() {
-    return myScope.toString();
+    return myScopeName;
   }
 
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    return ((EarthlyElementType)o).getScope().equals(getScope());
+    return myScopeName.equals(((EarthlyElementType) o).myScopeName);
   }
 }
